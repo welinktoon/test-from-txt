@@ -640,7 +640,6 @@
       <div class="file-row">
         <div class="file-tools">
           <input class="hidden-file-input" id="fileInput" type="file" accept=".txt,text/plain">
-          <button class="secondary" id="chooseFileBtn" type="button">Выбрать файл</button>
           <button class="secondary" id="openFileBtn" type="button">Открыть TXT</button>
         </div>
         <div class="actions">
@@ -724,7 +723,6 @@
 
   <script>
     const fileInput = document.getElementById("fileInput");
-    const chooseFileBtn = document.getElementById("chooseFileBtn");
     const openFileBtn = document.getElementById("openFileBtn");
     const textInput = document.getElementById("textInput");
     const startBtn = document.getElementById("startBtn");
@@ -1269,7 +1267,6 @@
       reader.readAsText(file, "UTF-8");
     });
 
-    chooseFileBtn.addEventListener("click", () => fileInput.click());
     openFileBtn.addEventListener("click", openTxtFile);
     textInput.addEventListener("input", refreshCount);
     rangeFrom.addEventListener("input", refreshCount);
